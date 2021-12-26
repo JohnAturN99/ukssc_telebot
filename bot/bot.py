@@ -3,6 +3,7 @@ import logging
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 import emoji
+import server
 
 
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -108,3 +109,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+server.server()
