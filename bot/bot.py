@@ -4,7 +4,8 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMo
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 import emoji
 
-API_KEY = os.getenv('API_KEY')
+
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -91,7 +92,7 @@ def faq_menu_message():
 
 def main() -> None:
     """Run the bot."""
-    updater = Updater(API_KEY, use_context=True)
+    updater = Updater(TOKEN, use_context=True)
     updater.dispatcher.add_handler(CommandHandler('start', start))
     updater.dispatcher.add_handler(CallbackQueryHandler(main_menu, pattern='main'))
     updater.dispatcher.add_handler(CallbackQueryHandler(events_menu, pattern='events'))
