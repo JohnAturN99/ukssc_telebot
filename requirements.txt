@@ -10,7 +10,7 @@ tornado==6.1
 pytz==2021.3
 tzdata==2021.5
 pytz-deprecation-shim==0.1.0.post0
-charset-normalizer==2.0.6)
+charset-normalizer==2.0.6
 tzlocal==4.1
 urllib3==1.26.7
 pytelegrambotapi==4.1.0
