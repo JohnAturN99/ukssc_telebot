@@ -4,7 +4,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMo
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 import emoji
 
-PORT = int(os.environ.get('PORT', 3000))
+PORT = int(os.environ.get('PORT', 8443))
 TOKEN = os.environ('TOKEN')
 
 logging.basicConfig(
@@ -102,7 +102,7 @@ def main() -> None:
     updater.dispatcher.add_handler(CallbackQueryHandler(second_submenu,
                                                     pattern='m2_1'))
     updater.dispatcher.add_error_handler(error)
-    updater.start_webhook(listen="0.0.0.0", port=int(PORT),url_path=TOKEN)
+    updater.start_webhook(listen="0.0.0.0", port=PORT,url_path=TOKEN,webhook_url='theukssc_bot'+TOKEN)
     updater.bot.setWebhook('https://uksscbot.herokuapp.com/' + TOKEN) 
     updater.idle()
 
