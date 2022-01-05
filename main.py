@@ -102,8 +102,7 @@ def main() -> None:
     updater.dispatcher.add_handler(CallbackQueryHandler(second_submenu,
                                                     pattern='m2_1'))
     updater.dispatcher.add_error_handler(error)
-    updater.start_webhook(listen="0.0.0.0", port=PORT,url_path=TOKEN)
-    updater.bot.setWebhook('https://uksscbot.herokuapp.com/' + TOKEN) 
+    updater.start_webhook(listen="0.0.0.0", port=PORT,url_path=TOKEN, webhook_url = 'https://uksscbot.herokuapp.com/' + TOKEN) 
     updater.idle()
 
 
