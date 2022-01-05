@@ -5,7 +5,7 @@ from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, Callback
 import emoji
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = os.environ["TOKEN"]
+TOKEN = os.environ['TOKEN']
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
