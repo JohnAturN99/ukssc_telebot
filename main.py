@@ -4,7 +4,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMo
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 import emoji
 
-PORT = int(os.environ.get('PORT', '5000'))
+PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ['TOKEN']
 
 logging.basicConfig(
