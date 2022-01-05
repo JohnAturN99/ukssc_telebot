@@ -3,7 +3,6 @@ import logging
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 import emoji
-import server
 
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
@@ -110,4 +109,3 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-server.server()
